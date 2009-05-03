@@ -1,0 +1,9 @@
+#!/bin/bash
+
+function show_dialog () {
+    #osascript -e "tell app \"Finder\" to display dialog \"$*\"" >/dev/null ;
+    growlnotify -m "$*";
+}
+
+
+sleep `expr ${1:-1} \* 60` &&   msg="${*:2} [`expr ${1:-1}` minute/s expired @ `date +%H:%M`]" && show_dialog $msg
