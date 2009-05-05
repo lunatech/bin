@@ -1,0 +1,22 @@
+Taken from http://ergo.rydlr.net/?p=61
+
+      After unsuccessful attempts to find a simple countdown timer
+      application, I decided to put one together. It turned out to be
+      surprisingly simple.
+
+      Create a file called /usr/local/bin/ct containing the above
+      lines. Set execute permissions. The Countdown Timer can be
+      launched from the KDE Run Dialog.
+
+This version is adapted for Mac OSX.  If you have the growlnotify
+script installed, this version of ct will work out of the box for you.
+If not, uncomment the `osascript` line in the function show_dialog.
+
+There are 2 ways to launch this script -
+
+  - From bash, /usr/local/bin/ct 2 (where 2 is the number of minutes
+    of countdown)
+
+  - From Quicksilver. Invoke Quicksilver, press . (period), and type
+    /usr/local/bin/ct 2 and choose 'execute in shell' from the action
+    items
